@@ -1,0 +1,132 @@
+html {
+  background: rgba(134 144 144 /14%) !important;
+}
+body {
+  background: transparent !important;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+.header {
+  background-color: white;
+  padding: 10px;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.menu {
+  border-radius: 0px 10px 10px 0px;
+  margin: 10px 0px 10px 0px;
+  height: 100%;
+  box-shadow: 4px 3px 2px 1px gray;
+}
+.menu-item {
+  align-items: center;
+  color: rgba(108 112 113);
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.menu-item svg {
+  font-size: 20px;
+}
+.menu-item > span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.menu .active {
+  background-color: white;
+  color: rgb(0 166 255);
+}
+.songs {
+  justify-content: center;
+}
+.play-logo {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  opacity: 0.6;
+  font-size: 10em;
+  right: 7px;
+  bottom: 60px;
+}
+.song {
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  width: 170px;
+}
+.audio-img {
+  height: 150px;
+  border-radius: 15px;
+  background-color: rgb(244, 155, 151);
+}
+
+.play-audio-img {
+  height: 150px;
+  border-radius: 15px;
+  background-color: rgb(220, 81, 74);
+}
+
+.sample-song-image {
+  width: 100px;
+  height: 90px;
+  color: white;
+}
+
+.sample-for-player {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: rgb(220, 81, 74);
+}
+
+.player-song-image {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.content {
+  margin-top: 20px;
+}
+.playlist-header {
+  font-size: 25px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px 30px;
+  padding: 0 30px;
+}
+.playlist-header > svg {
+  color: gray;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.player {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  text-align: center;
+  color: black;
+}
+.player-controls {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.player-controls:hover {
+  background-color: rgb(240, 239, 239);
+  border-radius: 15px;
+}
+
+.player .name {
+  padding-right: 15px;
+}
+.cursor-disabled {
+  cursor: not-allowed;
+}

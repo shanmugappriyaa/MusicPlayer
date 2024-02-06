@@ -1,32 +1,32 @@
 export const MusicList = [
-  {
-    title: "Death Bed",
-    artist: "Powfu",
-    artwork: "https://samplesongs.netlify.app/album-arts/faded.jpg",
-    url: "https://samplesongs.netlify.app/Death%20Bed.mp3",
-    id: 1,
-  },
-  {
-    title: "Bad Liar",
-    artist: "Powfu",
-    artwork: "https://samplesongs.netlify.app/album-arts/death-bed.jpg",
-    url: "https://samplesongs.netlify.app/Hate%20Me.mp3",
-    id: 2,
-  },
-  {
-    title: "Faded",
-    artist: "Powfu",
-    artwork: "https://samplesongs.netlify.app/album-arts/faded.jpg",
-    url: "https://samplesongs.netlify.app/Death%20Bed.mp3",
-    id: 3,
-  },
-  {
-    title: "Hate me",
-    artist: "Powfu",
-    artwork: "https://samplesongs.netlify.app/album-arts/death-bed.jpg",
-    url: "https://samplesongs.netlify.app/Hate%20Me.mp3",
-    id: 4,
-  },
+  // {
+  //   title: "Death Bed",
+  //   artist: "Powfu",
+  //   artwork: "https://samplesongs.netlify.app/album-arts/faded.jpg",
+  //   url: "https://samplesongs.netlify.app/Death%20Bed.mp3",
+  //   id: 1,
+  // },
+  // {
+  //   title: "Bad Liar",
+  //   artist: "Powfu",
+  //   artwork: "https://samplesongs.netlify.app/album-arts/death-bed.jpg",
+  //   url: "https://samplesongs.netlify.app/Hate%20Me.mp3",
+  //   id: 2,
+  // },
+  // {
+  //   title: "Faded",
+  //   artist: "Powfu",
+  //   artwork: "https://samplesongs.netlify.app/album-arts/faded.jpg",
+  //   url: "https://samplesongs.netlify.app/Death%20Bed.mp3",
+  //   id: 3,
+  // },
+  // {
+  //   title: "Hate me",
+  //   artist: "Powfu",
+  //   artwork: "https://samplesongs.netlify.app/album-arts/death-bed.jpg",
+  //   url: "https://samplesongs.netlify.app/Hate%20Me.mp3",
+  //   id: 4,
+  // },
 ];
 export const PlayList = [
   {
@@ -73,3 +73,19 @@ export const PlayList = [
     ],
   },
 ];
+
+export const updateLatestPlaying = (props) => {
+  console.log("props=======> ", props);
+  const storedItem = { ...localStorage };
+
+  for (let i in storedItem) {
+    if (i) {
+      const updatedItem = {
+        ...JSON.parse(storedItem[i]),
+        isPlaying: i == props.id ? true : false,
+      };
+      console.log(props.id, updatedItem, JSON.stringify(updatedItem));
+      localStorage.setItem(props.id + "", JSON.stringify(updatedItem));
+    }
+  }
+};

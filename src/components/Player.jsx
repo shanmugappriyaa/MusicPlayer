@@ -13,7 +13,7 @@ function Player() {
   const isPrev = () => index > 0 && list.length > 1;
   const isNext = () => index < list.length - 1 && list.length > 1;
 
-  const audioUrl = song?.url ? song.url : song?.blobUrl;
+  const audioUrl = song.url;
 
   const reloadMusic = () => {
     const player = document.getElementById("audio");
